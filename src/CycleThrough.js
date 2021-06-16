@@ -28,10 +28,11 @@ const CycleThrough = () => {
   const cycle = () => {
     console.log(jobs.length)
     console.log(currentJobIndex)
-    if (currentJobIndex <= jobs.length) {
+    if (currentJobIndex === jobs.length -1) {
       setCurrentJobIndex(0)
+    } else {
+      setCurrentJobIndex(currentJobIndex + 1)
     }
-    setCurrentJobIndex(currentJobIndex + 1)
   }
 
   return (

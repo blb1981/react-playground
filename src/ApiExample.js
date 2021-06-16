@@ -8,14 +8,9 @@ const ApiExample = () => {
   const [users, setUsers] = useState([])
   useEffect(() => {
     axios.get('https://jsonplaceholder.typicode.com/users').then((users) => {
-      console.log(users.data)
       setUsers(users.data)
       setLoading(false)
     })
-
-		return () => {
-			alert('cleaned up')
-		}
   }, [])
 
   return loading ? (
